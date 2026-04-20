@@ -40,7 +40,7 @@ def update(frame):
     ax.plot(t, ud, label="Unprotected Server (port 5000)", color="red", linewidth=2)
     ax.plot(t, pd_, label="Protected Server (port 5001)", color="green", linewidth=2)
     ax.axhline(
-        y=50, color="orange", linestyle="--", label="Detection Threshold (50 req/10s)"
+        y=100, color="orange", linestyle="--", label="Detection Threshold (100 req/10s)"
     )
     ax.set_title("Live DDoS Traffic: Unprotected vs Protected Server")
     ax.set_xlabel("Time (seconds since start)")

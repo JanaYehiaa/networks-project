@@ -1,10 +1,12 @@
 import requests
 import time
 
+TARGET = "http://127.0.0.1:5001"
+
 while True:
     try:
-        requests.get("http://127.0.0.1:5000")
+        requests.get(TARGET)
         print("Normal request")
-        time.sleep(20)
+        time.sleep(1)
     except:
         print("Server down")

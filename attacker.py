@@ -3,7 +3,7 @@ import threading
 import time
 import random
 
-TARGET = "http://127.0.0.1:5000"
+TARGET = "http://127.0.0.1:5001"
 
 # Config
 INITIAL_THREADS = 5
@@ -16,7 +16,7 @@ def attack():
     while True:
         try:
             # random jitter → more realistic traffic
-            time.sleep(random.uniform(0.01, 0.2))
+            time.sleep(random.uniform(0.01, 0.1))
             requests.get(TARGET, timeout=1)
         except:
             pass
